@@ -218,44 +218,44 @@ ul li a:hover::after{
 }
 
 
-.portifolio .s4 {
+.portifolio .s1 {
   background: url(../img/projetos/adietaketo-min.webp);
   background-position: top;
   background-size: cover;
   transition: background-position 20s linear;
 }
 
-.s5 {
+.s3 {
   background: url(../img/projetos/landigPage-min.webp);
   background-position: top;
   background-size: cover;
   transition:  background-position 14s linear;
 }
-.s6 {
+.s4 {
   background: url(../img/projetos/newsletter.webp);
   background-position: top;
   background-size: cover;
   transition:  background-position 10s linear;
 }
-.s7 {
+.s5 {
   background: url(../img/projetos/galeria.webp);
   background-position: top;
   background-size: cover;
   transition:  background-position 8s linear;
 }
-.s8 {
+.s6 {
   background: url(../img/projetos/lista-de-tarefas.webp);
   background-position: top;
   background-size: cover;
   transition:  background-position 8s linear;
 }
-.s9 {
+.s7 {
   background: url(../img/projetos/javascript.webp);
   background-position: top;
   background-size: cover;
   transition:  background-position 8s linear;
 }
-.s10 {
+.s8 {
   background: url(../img/projetos/spotifyclone.webp);
   background-position: top;
   background-size: cover;
