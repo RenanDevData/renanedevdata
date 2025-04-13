@@ -1,0 +1,1 @@
+const acertarData=()=>{let e=document.getElementById("date"),t=new Date,a=t.getFullYear();e.innerHTML=`Copyright \xa9${a} TODOS OS DIREITOS RESERVADOS`};acertarData();

@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #213,
+    #112 5%,
+    #112 60%,
+    #213 95%
+  );
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+}
+
+
+
+/* menu */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000e0;
+  height: 10vh;
+}
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+ul li{
+   list-style: none;
+   font-size: 26px;
+   padding: 12px;
+   
+}
+ul li img{
+  width: 200px;
+  height: 200px;
+  padding: 36px;
+}
+ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding-bottom: 12px;
+
+}
+
+ul li a:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+  margin-bottom: 2px;
+  transition: width 0.4s ease-in-out;
+}
+ul li a:hover::after{
+  width: 100%;
+  margin-top: 4px;
+}
+
+    /* Menu mobile toggle */
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+
+    /* Menu mobile visível ao clicar */
+    #menu-checkbox:checked ~ nav {
+      display: block;
+      background-color: #222;
+      padding: 1rem;
+    }
+
+
+/* Botão de menu hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* header */
+#particles-container{ 
+  background: #000;
+  position: relative;
+  width: 100%;
+  height: 50vh; 
+
+}
+
+.conteudo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 100%;
+  z-index: 10; /* Valor maior para ficar acima das partículas */
+  pointer-events: none
+}
+
+
+.conteudo .about-me {
+  max-width: 500px;
+  color: #fff;
+}
+
+.conteudo .about-me h1,span{
+  font-size: 32px;
+}
+
+.conteudo .about-me p {
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.conteudo .image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.conteudo .about-me .sociais{
+  margin: 16px 0 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.conteudo .about-me .sociais i{
+  font-size: 52px;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+
+/* .portifolio */
+.portifolio {
+  background: #000000f0;
+  color: #1A1A1A;
+  width: 100%;
+}
+.portifolio h2{
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  transition:  3s ease
+}
+
+.portifolio .portifolio-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portifolio .container-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.portifolio .screen {
+  background-color: #1A1A1A;
+  width: 350px;
+  height: 250px;
+  border: 1px solid #fff;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+.portifolio .screen:hover {
+  background-position: bottom;
+}
+.portifolio .s0 {
+  background: url(../img/projetos/mago-min.webp);
+  background-position: top;
+  background-size: cover;
+  transition: background-position 10s linear;
+}
+
+
+.portifolio .s4 {
+  background: url(../img/projetos/adietaketo-min.webp);
+  background-position: top;
+  background-size: cover;
+  transition: background-position 20s linear;
+}
+
+.s5 {
+  background: url(../img/projetos/landigPage-min.webp);
+  background-position: top;
+  background-size: cover;
+  transition:  background-position 14s linear;
+}
+.s6 {
+  background: url(../img/projetos/newsletter.webp);
+  background-position: top;
+  background-size: cover;
+  transition:  background-position 10s linear;
+}
+.s7 {
+  background: url(../img/projetos/galeria.webp);
+  background-position: top;
+  background-size: cover;
+  transition:  background-position 8s linear;
+}
+.s8 {
+  background: url(../img/projetos/lista-de-tarefas.webp);
+  background-position: top;
+  background-size: cover;
+  transition:  background-position 8s linear;
+}
+.s9 {
+  background: url(../img/projetos/javascript.webp);
+  background-position: top;
+  background-size: cover;
+  transition:  background-position 8s linear;
+}
+.s10 {
+  background: url(../img/projetos/spotifyclone.webp);
+  background-position: top;
+  background-size: cover;
+  transition:  background-position 8s linear;
+}
+
+
+
+/* habilidade1 */
+
+
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #000;
+}
+
+.habilidades h2 {
+  font-size: 32px;
+  color: #FFF;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.habilidades h3 {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 10px;
+}
+.box-skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box-skills .skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+ 
+}
+.box-skills .skills div{
+  position: relative;
+  text-align: center;
+  padding: 12px 24px;
+  margin-right: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px transparent;
+  border-radius: 2em;
+  background: 
+  var(--main-bg) padding-box,
+  var(--gradient-border) border-box, 
+  var(--main-bg) border-box;
+
+  transition: --border-angle 1s ease;
+}
+
+
+
+.box-skills .skills div:hover{
+  --border-angle: 1turn;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+
+@supports (background: paint(something)) {
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+}
+
+
+
+
+
+ /* quem sou eu  */
+.sobre {
+  background: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sobre h3{
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 28px;
+  padding: 10px;
+}
+.sobre .sobre-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 50%;
+  gap: 60px;
+}
+.sobre .sobre-container img{
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.sobre .sobre-container img:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sobre .sobre-container p{
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+.email{
+  color: #fff;
+  font-size: 16px;
+}
+.email i{
+  margin-right: 4px;
+} 
+
+/* Estilos para o botão */
+.btn {          /* Faz o botão ser um bloco inline, mantendo o formato */
+  padding: 12px 24px;               /* Espaçamento interno do botão */
+  background-color: #2570d3;        /* Cor de fundo do botão (verde do WhatsApp) */
+  color: white;                     /* Cor do texto */
+  font-size: 16px;                  /* Tamanho da fonte */
+  font-weight: bold;                /* Deixa a fonte em negrito */
+  text-decoration: none;            /* Remove sublinhado padrão de links */
+  border-radius: 8px;               /* Bordas arredondadas */
+  transition: all 0.3s ease;        /* Efeito suave para transições */
+  text-align: center;
+  margin: 20px 0;               /* Alinha o texto no centro */
+}
+
+.btn:hover {
+  background-color: #1a6edc;        /* Cor de fundo ao passar o mouse (verde mais escuro do WhatsApp) */
+  transform: scale(1.05);            /* Aumenta levemente o tamanho do botão */
+}
+
+.btn:active {
+  background-color: #075E54;        /* Cor mais escura quando o botão é pressionado (tom mais escuro) */
+  transform: scale(1);               /* Desfaz o aumento de tamanho */
+}
+
+.btn:focus {
+  outline: none;                    /* Remove o contorno padrão do foco */
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.5); /* Adiciona um brilho ao focar no botão */
+}
+/* formacao */
+
+.formacao{
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formacao .card-formacao{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.formacao .card{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 20px;
+  gap: 10px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.formacao .card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.card-formacao .card img{
+   width: 100%;
+   height: 40%;
+   padding: 14px;
+   border-radius: 8px;
+}
+.formacao .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formacao h3{
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 28px;
+  padding: 14px;
+}
+.formacao h4{
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 28px;
+  padding: 14px;
+}
+.formacao p{
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 28px;
+  padding: 14px;
+}
+
+
+
+/* footer */
+
+footer {
+  background-color:  #1A1A1A;
+  width: 100%;
+  font-size: 16px;
+}
+footer .footer-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+footer .greatings{
+  color: #fff;
+  padding: 40px;
+}
+.footer-content .contatcs{
+  color: #fff;
+  font-size: 16px;
+}
+.contatcs .sociais{
+  font-size: 26px;
+  margin-top: 20px;
+}
+.contatcs .sociais i{
+  color: #000;
+  border-radius: 50%;
+ background-color:#fff ;
+ padding: 10px;
+}
+.contatcs .sociais i:hover{
+  color: #fff;
+  border-radius: 50%;
+ background-color:#000 ;
+ padding: 10px;
+}
+
+.copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+hr{
+  width: 80%;
+}
+
+#date{
+  color: #fff;
+  margin-top: 10px;
+}
+
+
+/* responsivo */
+
+.menu-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1px) and (max-width: 980px) {
+  nav ul:last-child {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 999;
+}
+
+nav ul:last-child.active {
+    display: flex;
+}
+
+nav ul:last-child li {
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+nav ul:last-child li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-mobile-btn {
+    display: block;
+    margin-right: 15px;
+}
+
+/* Ajusta o layout da navbar */
+nav {
+    justify-content: space-between;
+    position: relative;
+}
+
+#particles-container{ 
+  background: #000;
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+
+}
+
+.conteudo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 100%;
+  z-index: 10; /* Valor maior para ficar acima das partículas */
+  pointer-events: none;
+  text-align: center;
+}
+
+
+.conteudo .about-me {
+  max-width: 500px;
+  color: #fff;
+}
+
+.conteudo .about-me h1,span{
+  font-size: 32px;
+  text-align: center;
+}
+
+.conteudo .about-me p {
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.conteudo .image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.conteudo .about-me .sociais{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.conteudo .about-me .sociais i{
+  font-size: 42px;
+}
+
+ .sobre{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+ .sobre h3{
+  font-size: 26px;
+ }
+ .sobre h3{
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 28px;
+  padding: 10px;
+}
+.sobre .sobre-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  gap: 60px;
+}
+.sobre .sobre-container img{
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.sobre .sobre-container img:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sobre .sobre-container p{
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.email{
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+.email i{
+  margin-right: 4px;
+} 
+.cv{
+  text-align: center;
+}
+
+
+footer {
+  background-color:  #1A1A1A;
+  width: 100%;
+  font-size: 16px;
+}
+footer .footer-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+footer .greatings{
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
+.footer-content .contatcs{
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+.contatcs .sociais{
+  font-size: 26px;
+  margin: 20px;
+}
+.contatcs .sociais i{
+  color: #000;
+  border-radius: 50%;
+ background-color:#fff ;
+ padding: 10px;
+}
+.contatcs .sociais i:hover{
+  color: #fff;
+  border-radius: 50%;
+ background-color:#000 ;
+ padding: 10px;
+}
+
+.copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+}
+
