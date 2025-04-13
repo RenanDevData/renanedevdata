@@ -16,7 +16,9 @@
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
 }
 
+html{
 
+}
 
 /* menu */
 nav{

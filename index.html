@@ -47,12 +47,12 @@
 
         <button class="menu-mobile-btn" aria-label="Menu">☰</button>
 
-        <ul>
+        <ul class="nav">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Formação</a></li>
+            <li><a href="#portifolio">Projetos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#Sobre">Sobre</a></li>
+            <li><a href="#formacao">Formação</a></li>
 
         </ul>
     </nav>
@@ -86,7 +86,7 @@
 
 
 
-    <section class="portifolio">
+    <section id='portifolio' class="portifolio">
         <h2> 🖼️ Portfólio</h2>
         <div class="container-screen">
             <a href="https://renandevweb.github.io/magodo15.github.io/" aria-label="magodom15">
@@ -118,8 +118,8 @@
     </section>
 
 
-    <section class="habilidades">
-        <h2> 💻 Habilidades</h2>
+    <section  class="habilidades">
+        <h2 id='habilidades'> 💻 Habilidades</h2>
 
         <!-- front-end -->
         <div class="box-skills">
@@ -334,8 +334,21 @@
     <script src="./js/script.js"></script>
     <script src="./js/handwriten.js"></script>
     <script src="./js/menuDropdown.js"></script>
+    <!-- <script src="./js/MenuEffect.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $('a[href^="#"]').on('click', function(e) {
+  e.preventDefault();
 
+  let id = $(this).attr('href');
+  let targetOffset = $(id).offset().top - 100;
 
+  $('html, body').animate({
+    scrollTop: targetOffset
+  }, 3000); // 500ms = meio segundo de animação
+});
+
+    </script>
 </body>
 
 </html>
