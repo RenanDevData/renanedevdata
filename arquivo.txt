@@ -1,0 +1,7 @@
+--background1-dark: #0F0F0F;
+--background2-dark: #000000f0;
+--menuMobile-color: #222;
+--menmuMobile-secondColor: #333;
+--font1-text: #FFF;
+--font-text2: #000;
+--portifolio-color: #1A1A1A;

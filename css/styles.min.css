@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,94 +7,155 @@
   font-family: "Ubuntu", sans-serif;
   text-decoration: none;
   --border-angle: 0turn;
-  --main-bg: conic-gradient(
-    from var(--border-angle),
-    #213,
-    #112 5%,
-    #112 60%,
-    #213 95%
-  );
+  --main-bg: conic-gradient(from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%);
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
 }
 
-html{
-
+:root{
+  --background1-dark: #0F0F0F;
+  --background2-dark: #1A1A1A;
+  --menuMobile-color: #1E1E1E;
+  --menmuMobile-secondColor:#3A3A3A;
+  --font1-text: 	#EAEAEA;
+  --font-text2: 	#C4C4C4;
+  --portifolio-color: #292929;
+  --font-buttonColor: #EAEAEA;
+  --button-background: #8f00ff;
+--button-background2: #8f00ff2a;
 }
 
+
+/* Definições para o modo claro */
+.light-theme {
+  --background1-dark: #f9fcfa;
+  --background2-dark: #464646;
+  --menuMobile-color: 	#eee8e8;
+  --menmuMobile-secondColor: #DADADA;
+  --font1-text: #1A1A1A;
+  --font-text2: #f5f5f5;
+  --font-text3: 	#000;
+  --portifolio-color: #F0F0F0;
+  --button-background: #8000ff98;
+  --font-buttonColor: #000;
+  --button-background2:  #7227bc67;
+  
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--font1-text);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle i {
+  font-size: 20px;
+  
+}
+.fa-sun{
+  color:  #f49e12;
+}
+
+.fa-moon{
+  color: #8a8888c8;
+}
+#theme-toggle:hover {
+  transform: scale3d(1, 1, 1);
+  box-shadow: 1px 1px 1px var(--background2-dark),
+              -7px -7px 15px rgba(255, 255, 255, 0.07);
+              border-radius: 10px;
+              padding: 10px;
+}
+
+
 /* menu */
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000e0;
+  background-color: var(--background1-dark);
   height: 10vh;
 }
-ul{
+
+ul {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
 }
 
-ul li{
-   list-style: none;
-   font-size: 26px;
-   padding: 12px;
-   
+ul li {
+  list-style: none;
+  font-size: 26px;
+  padding: 12px;
+
 }
-ul li img{
+
+ul li img {
   width: 200px;
   height: 200px;
   padding: 36px;
 }
-ul li a{
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-    padding-bottom: 12px;
+
+ul li a {
+  position: relative;
+  color: var(--font1-text);
+  text-decoration: none;
+  font-size: 22px;
+  padding-bottom: 12px;
 
 }
 
-ul li a:after{
+ul li a:after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 2px;
   width: 0%;
-  background-color: #fff;
+  background-color: var(--font1-text);
   margin-bottom: 2px;
   transition: width 0.4s ease-in-out;
 }
-ul li a:hover::after{
+
+ul li a:hover::after {
   width: 100%;
   margin-top: 4px;
 }
 
-    /* Menu mobile toggle */
-    .menu-toggle {
-      display: none;
-    }
+/* Menu mobile toggle */
+.menu-toggle {
+  display: none;
+}
 
-    .menu-icon {
-      display: block;
-      cursor: pointer;
-    }
+.menu-icon {
+  display: block;
+  cursor: pointer;
+}
 
-    .menu-icon div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 5px 0;
-    }
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--font1-text);
+  margin: 5px 0;
+}
 
-    /* Menu mobile visível ao clicar */
-    #menu-checkbox:checked ~ nav {
-      display: block;
-      background-color: #222;
-      padding: 1rem;
-    }
+/* Menu mobile visível ao clicar */
+#menu-checkbox:checked~nav {
+  display: block;
+  background-color: var(--menmuMobile-secondColor);
+  padding: 1rem;
+}
 
 
 /* Botão de menu hamburguer */
@@ -102,21 +164,21 @@ ul li a:hover::after{
   font-size: 30px;
   background: none;
   border: none;
-  color: white;
+  color: var(--font1-text);
   cursor: pointer;
   margin-right: 20px;
 }
 
 /* header */
-#particles-container{ 
-  background: #000;
+#particles-container {
+  background: var(--background2-dark);
   position: relative;
   width: 100%;
-  height: 50vh; 
+  height: 50vh;
 
 }
 
-.conteudo{
+.conteudo {
   position: absolute;
   top: 0;
   left: 0;
@@ -129,17 +191,19 @@ ul li a:hover::after{
   flex-wrap: wrap;
   padding: 20px;
   max-width: 100%;
-  z-index: 10; /* Valor maior para ficar acima das partículas */
+  z-index: 10;
+  /* Valor maior para ficar acima das partículas */
   pointer-events: none
 }
 
 
 .conteudo .about-me {
   max-width: 500px;
-  color: #fff;
+  color: var(--font-text2);
 }
 
-.conteudo .about-me h1,span{
+.conteudo .about-me h1,
+span {
   font-size: 32px;
 }
 
@@ -156,18 +220,20 @@ ul li a:hover::after{
   border-radius: 50%;
   object-fit: cover;
 }
-.conteudo .about-me .sociais{
+
+.conteudo .about-me .sociais {
   margin: 16px 0 0 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   pointer-events: visible;
 }
-.conteudo .about-me .sociais a{
-  color: #fff;
+
+.conteudo .about-me .sociais a {
+  color: var(--font-text2);
 }
 
-.conteudo .about-me .sociais a i{
+.conteudo .about-me .sociais a i {
   font-size: 52px;
   margin-right: 20px;
   border-radius: 6px;
@@ -176,16 +242,17 @@ ul li a:hover::after{
 
 /* .portifolio */
 .portifolio {
-  background: #000000f0;
+  background: var(--background1-dark);
   color: #1A1A1A;
   width: 100%;
 }
-.portifolio h2{
+
+.portifolio h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--font1-text);
   text-align: center;
-  transition:  3s ease
+  transition: 3s ease
 }
 
 .portifolio .portifolio-imgs {
@@ -193,6 +260,7 @@ ul li a:hover::after{
   justify-content: center;
   align-items: center;
 }
+
 .portifolio .container-screen {
   display: flex;
   align-items: center;
@@ -201,17 +269,20 @@ ul li a:hover::after{
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .portifolio .screen {
-  background-color: #1A1A1A;
+  background-color: var(--portifolio-color);
   width: 350px;
   height: 250px;
-  border: 1px solid #fff;
+  border: 1px solid var(--font1-text);
   border-radius: 18px;
   margin-bottom: 20px;
 }
+
 .portifolio .screen:hover {
   background-position: bottom;
 }
+
 .portifolio .s0 {
   background: url(../img/projetos/mago-min.webp);
   background-position: top;
@@ -231,37 +302,42 @@ ul li a:hover::after{
   background: url(../img/projetos/landigPage-min.webp);
   background-position: top;
   background-size: cover;
-  transition:  background-position 14s linear;
+  transition: background-position 14s linear;
 }
+
 .s4 {
   background: url(../img/projetos/newsletter.webp);
   background-position: top;
   background-size: cover;
-  transition:  background-position 10s linear;
+  transition: background-position 10s linear;
 }
+
 .s5 {
   background: url(../img/projetos/galeria.webp);
   background-position: top;
   background-size: cover;
-  transition:  background-position 8s linear;
+  transition: background-position 8s linear;
 }
+
 .s6 {
   background: url(../img/projetos/lista-de-tarefas.webp);
   background-position: top;
   background-size: cover;
-  transition:  background-position 8s linear;
+  transition: background-position 8s linear;
 }
+
 .s7 {
   background: url(../img/projetos/javascript.webp);
   background-position: top;
   background-size: cover;
-  transition:  background-position 8s linear;
+  transition: background-position 8s linear;
 }
+
 .s8 {
   background: url(../img/projetos/spotifyclone.webp);
   background-position: top;
   background-size: cover;
-  transition:  background-position 8s linear;
+  transition: background-position 8s linear;
 }
 
 
@@ -274,12 +350,12 @@ ul li a:hover::after{
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #000;
+  background-color: var(--background2-dark);
 }
 
 .habilidades h2 {
   font-size: 32px;
-  color: #FFF;
+  color: var(--font-text2);
   text-align: center;
   letter-spacing: 2px;
   font-weight: 700;
@@ -287,51 +363,53 @@ ul li a:hover::after{
 
 .habilidades h3 {
   font-size: 32px;
-  color: #fff;
+  color: var(--font-text2);
   text-align: center;
   letter-spacing: 2px;
   font-weight: 700;
   margin: 10px;
 }
-.box-skills{
+
+.box-skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.box-skills .skills{
+.box-skills .skills {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   margin-bottom: 10px;
- 
+
 }
-.box-skills .skills div{
+
+.box-skills .skills div {
   position: relative;
   text-align: center;
   padding: 12px 24px;
   margin-right: 10px;
-  color: #fff;
+  color: var(--font-text2);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 1px transparent;
   border-radius: 2em;
-  background: 
-  var(--main-bg) padding-box,
-  var(--gradient-border) border-box, 
-  var(--main-bg) border-box;
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
 
   transition: --border-angle 1s ease;
 }
 
 
 
-.box-skills .skills div:hover{
+.box-skills .skills div:hover {
   --border-angle: 1turn;
 }
 
@@ -354,105 +432,122 @@ ul li a:hover::after{
 
 
 
- /* quem sou eu  */
+/* quem sou eu  */
 .sobre {
-  background: #1A1A1A;
+  background: var(--background1-dark);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.sobre h3{
+
+.sobre h3 {
   text-align: center;
-  color: #fff;
+  color: var(--font1-text);
   font-size: 20px;
   margin-bottom: 28px;
   padding: 10px;
 }
-.sobre .sobre-container{
+
+.sobre .sobre-container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   max-width: 50%;
   gap: 60px;
 }
-.sobre .sobre-container img{
+
+.sobre .sobre-container img {
   width: 100%;
   border-radius: 20px;
   object-fit: cover;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-.sobre .sobre-container img:hover{
+
+.sobre .sobre-container img:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.sobre .sobre-container p{
-  color: #fff;
+.sobre .sobre-container p {
+  color: var(--font1-text);
   font-size: 16px;
   letter-spacing: 2px;
   text-align: justify;
 }
-.email{
-  color: #fff;
+
+.email {
+  color: var(--font1-text);
   font-size: 16px;
 }
-.email i{
+
+.email i {
   margin-right: 4px;
-} 
+}
 
 /* Estilos para o botão */
-.btn {          /* Faz o botão ser um bloco inline, mantendo o formato */
-  padding: 12px 24px;               /* Espaçamento interno do botão */
-  background-color: #2570d3;        /* Cor de fundo do botão (verde do WhatsApp) */
-  color: white;                     /* Cor do texto */
-  font-size: 16px;                  /* Tamanho da fonte */
-  font-weight: bold;                /* Deixa a fonte em negrito */
-  text-decoration: none;            /* Remove sublinhado padrão de links */
-  border-radius: 8px;               /* Bordas arredondadas */
-  transition: all 0.3s ease;        /* Efeito suave para transições */
-  text-align: center;
-  margin: 20px 0;               /* Alinha o texto no centro */
+.btn {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: var(--font-buttonColor);
+  padding: 15px 30px;
+  border: 2px solid var(--button-background);
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px var(--button-background), 0 0 20px var(--button-background2);
+  text-shadow: 0 0 5px var(--button-background);
+  margin: 20px 0;
 }
+
+.neon-btn::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: var(--button-background);
+  opacity: 0.2;
+  filter: blur(10px);
+  z-index: -1;
+  border-radius: 10px;
+}
+
 
 .btn:hover {
-  background-color: #1a6edc;        /* Cor de fundo ao passar o mouse (verde mais escuro do WhatsApp) */
-  transform: scale(1.05);            /* Aumenta levemente o tamanho do botão */
+  box-shadow: 0 0 15px var(--button-background), 0 0 15px var(--button-background), 0 0 30px var(--button-background);
+  transform: scale(1.05);
 }
 
-.btn:active {
-  background-color: #075E54;        /* Cor mais escura quando o botão é pressionado (tom mais escuro) */
-  transform: scale(1);               /* Desfaz o aumento de tamanho */
-}
 
-.btn:focus {
-  outline: none;                    /* Remove o contorno padrão do foco */
-  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.5); /* Adiciona um brilho ao focar no botão */
-}
+
 /* formacao */
 
-.formacao{
-  background: #000;
+.formacao {
+  background: var(--background2-dark);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.formacao .card-formacao{
+.formacao .card-formacao {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.formacao .card{
+.formacao .card {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   justify-content: flex-start;
   align-items: flex-start;
-  border: 1px solid #fff;
+  border: 1px solid var(--font1-text);
   border-radius: 10px;
   margin: 20px;
   gap: 10px;
@@ -461,42 +556,45 @@ ul li a:hover::after{
 }
 
 
-.formacao .card:hover{
+.formacao .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 
-.card-formacao .card img{
-   width: 100%;
-   height: 40%;
-   padding: 14px;
-   border-radius: 8px;
+.card-formacao .card img {
+  width: 100%;
+  height: 40%;
+  padding: 14px;
+  border-radius: 8px;
 }
-.formacao .content{
+
+.formacao .content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.formacao h3{
+.formacao h3 {
   text-align: center;
-  color: #fff;
+  color: var(--font-text2);
   font-size: 24px;
   margin-bottom: 28px;
   padding: 14px;
 }
-.formacao h4{
+
+.formacao h4 {
   text-align: center;
-  color: #fff;
+  color: var(--font-text2);
   font-size: 20px;
   margin-bottom: 28px;
   padding: 14px;
 }
-.formacao p{
+
+.formacao p {
   text-align: center;
-  color: #fff;
+  color: var(--font-text2);
   font-size: 18px;
   margin-bottom: 28px;
   padding: 14px;
@@ -507,43 +605,49 @@ ul li a:hover::after{
 /* footer */
 
 footer {
-  background-color:  #1A1A1A;
+  background-color: var(--portifolio-color);
   width: 100%;
   font-size: 16px;
 }
-footer .footer-content{
+
+footer .footer-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   gap: 30px;
 }
-footer .greatings{
-  color: #fff;
+
+footer .greatings {
+  color: var(--font1-text);
   padding: 40px;
 }
-.footer-content .contatcs{
-  color: #fff;
+
+.footer-content .contatcs {
+  color: var(--font1-text);
   font-size: 16px;
 }
-.contatcs .sociais{
+
+.contatcs .sociais {
   font-size: 26px;
   margin-top: 20px;
 }
-.contatcs .sociais i{
-  color: #000;
+
+.contatcs .sociais i {
+  color: var(--font1-text);
   border-radius: 50%;
- background-color:#fff ;
- padding: 10px;
-}
-.contatcs .sociais i:hover{
-  color: #fff;
-  border-radius: 50%;
- background-color:#000 ;
- padding: 10px;
+  background-color: var(--background1-dark);
+  padding: 10px;
 }
 
-.copyright{
+.contatcs .sociais i:hover {
+  color: var(--font1-text);
+  border-radius: 50%;
+  background-color:  var(--portifolio-color);
+  padding: 10px;
+}
+
+.copyright {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -551,12 +655,12 @@ footer .greatings{
 
 }
 
-hr{
+hr {
   width: 80%;
 }
 
-#date{
-  color: #fff;
+#date {
+  color: var(--font1-text);
   margin-top: 10px;
 }
 
@@ -567,7 +671,7 @@ hr{
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--font1-text);
   font-size: 24px;
   cursor: pointer;
 }
@@ -582,198 +686,201 @@ hr{
     width: 100%;
     background-color: #1a1a1a;
     z-index: 999;
-}
+  }
 
-nav ul:last-child.active {
+  nav ul:last-child.active {
     display: flex;
-}
+  }
 
-nav ul:last-child li {
+  nav ul:last-child li {
     width: 100%;
     border-bottom: 1px solid #333;
-}
+  }
 
-nav ul:last-child li a {
+  nav ul:last-child li a {
     display: block;
     padding: 15px;
     color: white;
     text-decoration: none;
-}
+  }
 
-.menu-mobile-btn {
+  .menu-mobile-btn {
     display: block;
     margin-right: 15px;
-}
+  }
 
-/* Ajusta o layout da navbar */
-nav {
+  /* Ajusta o layout da navbar */
+  nav {
     justify-content: space-between;
     position: relative;
-}
+  }
 
-#particles-container{ 
-  background: #000;
-  position: relative;
-  width: 100%;
-  height: 100vh; 
+  #particles-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
 
-}
+  }
 
-.conteudo{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  flex-wrap: wrap;
-  padding: 20px;
-  max-width: 100%;
-  z-index: 10; /* Valor maior para ficar acima das partículas */
-  pointer-events: none;
-  text-align: center;
-}
-
-
-.conteudo .about-me {
-  max-width: 500px;
-  color: #fff;
-}
-
-.conteudo .about-me h1,span{
-  font-size: 32px;
-  text-align: center;
-}
-
-.conteudo .about-me p {
-  font-size: 22px;
-  letter-spacing: 1px;
-  text-align: left;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.conteudo .image img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.conteudo .about-me .sociais{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.conteudo .about-me .sociais i{
-  font-size: 42px;
-}
-
- .sobre{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- }
- .sobre h3{
-  font-size: 26px;
- }
- .sobre h3{
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  margin-bottom: 28px;
-  padding: 10px;
-}
-.sobre .sobre-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  gap: 60px;
-}
-.sobre .sobre-container img{
-  width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.sobre .sobre-container img:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-}
-
-.sobre .sobre-container p{
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-align: left;
-}
-.email{
-  text-align: center;
-  color: #fff;
-  font-size: 16px;
-}
-.email i{
-  margin-right: 4px;
-} 
-.cv{
-  text-align: center;
-}
+  .conteudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 100%;
+    z-index: 10;
+    /* Valor maior para ficar acima das partículas */
+    pointer-events: none;
+    text-align: center;
+  }
 
 
-footer {
-  background-color:  #1A1A1A;
-  width: 100%;
-  font-size: 16px;
-}
-footer .footer-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-}
-footer .greatings{
-  text-align: center;
-  color: #fff;
-  padding: 40px;
-}
-.footer-content .contatcs{
-  text-align: center;
-  color: #fff;
-  font-size: 16px;
-}
-.contatcs .sociais{
-  font-size: 26px;
-  margin: 20px;
-}
-.contatcs .sociais i{
-  color: #000;
-  border-radius: 50%;
- background-color:#fff ;
- padding: 10px;
-}
-.contatcs .sociais i:hover{
-  color: #fff;
-  border-radius: 50%;
- background-color:#000 ;
- padding: 10px;
-}
+  .conteudo .about-me {
+    max-width: 500px;
+  }
 
-.copyright{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  .conteudo .about-me h1,
+  span {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .conteudo .about-me p {
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .conteudo .image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .conteudo .about-me .sociais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 4px;
+  }
+
+  .conteudo .about-me .sociais i {
+    font-size: 42px;
+  }
+
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sobre h3 {
+    font-size: 26px;
+  }
+
+  .sobre h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 28px;
+    padding: 10px;
+  }
+
+  .sobre .sobre-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    gap: 60px;
+  }
+
+  .sobre .sobre-container img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+ 
+
+  .sobre .sobre-container p {
+    color: var(--font-text3);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+
+  .email {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .email i {
+    margin-right: 4px;
+  }
+
+  .cv {
+    text-align: center;
+  }
+
+
+  footer {
+
+    width: 100%;
+    font-size: 16px;
+  }
+
+  footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  footer .greatings {
+    text-align: center;
+
+    padding: 40px;
+  }
+
+  .footer-content .contatcs {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .contatcs .sociais {
+    font-size: 26px;
+    margin: 20px;
+  }
+
+  .contatcs .sociais i {
+    color: #000;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
 
 }
-
-}
-
