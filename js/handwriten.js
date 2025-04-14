@@ -41,7 +41,7 @@ function writeOnTheScreen(text){
   textArrayAbout.forEach((letter, index) => {
     setTimeout(() => {
       textP.innerHTML += letter
-    }, index * 75);
+    }, index * 35);
   })
 }
 

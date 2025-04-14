@@ -24,6 +24,7 @@
   --font-text2: 	#C4C4C4;
   --portifolio-color: #292929;
   --font-buttonColor: #EAEAEA;
+  --font-text-p: #fff;
   --button-background: #8f00ff;
 --button-background2: #8f00ff2a;
 }
@@ -38,6 +39,7 @@
   --font1-text: #1A1A1A;
   --font-text2: #f5f5f5;
   --font-text3: 	#000;
+  --font-text-p: #000;
   --portifolio-color: #F0F0F0;
   --button-background: #8000ff98;
   --font-buttonColor: #000;
@@ -470,7 +472,7 @@ span {
 }
 
 .sobre .sobre-container p {
-  color: var(--font1-text);
+  color: #fff;
   font-size: 16px;
   letter-spacing: 2px;
   text-align: justify;
@@ -744,12 +746,14 @@ hr {
 
   .conteudo .about-me {
     max-width: 500px;
+   
   }
 
   .conteudo .about-me h1,
   span {
     font-size: 32px;
     text-align: center;
+    color: #fff;
   }
 
   .conteudo .about-me p {
@@ -758,6 +762,7 @@ hr {
     text-align: left;
     margin-top: 10px;
     text-align: center;
+    color: #fff;
   }
 
   .conteudo .image img {
@@ -815,7 +820,7 @@ hr {
  
 
   .sobre .sobre-container p {
-    color: var(--font-text3);
+    color: var(--font-text-p);
     font-size: 16px;
     letter-spacing: 2px;
     text-align: left;

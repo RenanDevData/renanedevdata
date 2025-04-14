@@ -42,7 +42,7 @@
 <meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" href="./css/styles.min.css" />
-    <link rel="stylesheet" href="./css/animacoes.min.css" />
+    <link rel="stylesheet" href="./css/animacoes.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="./js/particles.js"></script>
@@ -85,17 +85,17 @@
                         dados que guiam meu
                         código. Soluções digitais que entregam valor de verdade para sua empresa.</p>
                     <div class="sociais">
-                        <a href="https://github.com/RenanDevWeb?tab=repositories" target="_blank"
+                        <a class="move" href="https://github.com/RenanDevWeb?tab=repositories" target="_blank"
                             rel="noopener noreferrer" alt="github"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/renanarizasalmazio/" target="_blank"
+                        <a class="move" href="https://www.linkedin.com/in/renanarizasalmazio/" target="_blank"
                             rel="noopener noreferrer"alt='linkedin'><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/renan_salmazio/" target="_blank" rel="noopener noreferrer" alt="instagram"><i
+                        <a class="move" href="https://www.instagram.com/renan_salmazio/" target="_blank" rel="noopener noreferrer" alt="instagram"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=5511981052481&" target="_blank"
+                        <a class="move" href="https://api.whatsapp.com/send?phone=5511981052481&" target="_blank"
                             rel="noopener noreferrer" alt="whatsapp"><i class="fa-brands fa-whatsapp" ></i></a>
                     </div>
                 </div>
-                <div class="image"><img src="./img/perfil.webp" alt="Foto de Perfil de Renan Salmazio"></div>
+                <div class="image"><img src="./img/perfil.webp" alt="Foto de Perfil de Renan Salmazio" class="fadeout"></div>
             </div>
         </div>
 
@@ -106,43 +106,43 @@
 
     <section id='portifolio' class="portifolio">
         <h2> 🖼️ Portfólio</h2>
-        <div class="container-screen">
-            <a href="https://renandevweb.github.io/magodo15.github.io/" aria-label="magodom15">
+        <div class="container-screen" >
+            <a class="fadeout" href="https://renandevweb.github.io/magodo15.github.io/" aria-label="magodom15">
                 <div class="screen s0"></div>
             </a>
 
-            <a href="https://apoderosadietaketo.netlify.app" aria-label="apoderosadietaketo">
+            <a class="fadeout" href="https://apoderosadietaketo.netlify.app" aria-label="apoderosadietaketo">
                 <div class="screen s1" "></div></a>
 
-               <a href=" https://renandevweb.github.io/Landing-page/" aria-label="Landing-page">
+               <a  class="fadeout" href=" https://renandevweb.github.io/Landing-page/" aria-label="Landing-page">
                     <div class="screen s3"></div>
             </a>
-            <a href="https://renandevweb.github.io/-Newslettersignupform/" aria-label="newsletter">
+            <a  class="fadeout" href="https://renandevweb.github.io/-Newslettersignupform/" aria-label="newsletter">
                 <div class="screen s4"></div>
             </a>
-            <a href="https://renandevweb.github.io/siteGaleriaComSass/" aria-label="site galeria">
+            <a class="fadeout" href="https://renandevweb.github.io/siteGaleriaComSass/" aria-label="site galeria">
                 <div class="screen s5"></div>
             </a>
-            <a href="https://renandevweb.github.io/TodoList/" aria-label="TodoList">
+            <a class="fadeout" href="https://renandevweb.github.io/TodoList/" aria-label="TodoList">
                 <div class="screen s6"></div>
             </a>
-            <a href="https://renandevweb.github.io/spotifyCloneHome/src/" aria-label="clone spotify">
+            <a class="fadeout" href="https://renandevweb.github.io/spotifyCloneHome/src/" aria-label="clone spotify">
                 <div class="screen s8"></div>
             </a>
-            <a href="https://renandevweb.github.io/projetosComJavascript/" aria-label="Projetos com javascript">
+            <a class="fadeout" href="https://renandevweb.github.io/projetosComJavascript/" aria-label="Projetos com javascript">
                 <div class="screen s7"></div>
             </a>
         </div>
     </section>
 
 
-    <section  class="habilidades">
+    <section  class="habilidades ">
         <h2 id='habilidades'> 💻 Habilidades</h2>
 
         <!-- front-end -->
-        <div class="box-skills">
-            <h3>Front-End</h3>
-            <div class="skills">
+        <div class="box-skills observer fade-in">
+            <h3 class="fadeout">Front-End</h3>
+            <div class="skills  ">
                 <div class="turn"><img src="https://skillicons.dev/icons?i=html&theme=dark" alt="Html"/><br>HTML</div>
                 <div><img src="https://skillicons.dev/icons?i=css&theme=dark" / alt="Css"><br>CSS</div>
                 <div><img src="https://skillicons.dev/icons?i=js&theme=dark" / alt="Javascript"><br>JavaScript</div>
@@ -162,13 +162,13 @@
             </div>
         </div>
 
-
+        <!-- DOMTokenList(2) ['skills', 'observer', value: 'skills observer'] -->
 
 
         <!-- back-end -->
-        <div class="box-skills">
-            <h3>🧠 Back-End</h3>
-            <div class="skills">
+        <div class="box-skills observer ">
+            <h3 class="fadeout">🧠 Back-End</h3>
+            <div class="skills ">
                 <div><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Nodejs" /><br>Node.js</div>
                 <div><img src="https://skillicons.dev/icons?i=express&theme=dark" / alt="Express"><br>Express</div>
                 <div><img src="https://skillicons.dev/icons?i=sequelize&theme=dark" / alt="Sequelize"><br>Sequelize</div>
@@ -183,9 +183,9 @@
         </div>
 
 
-        <div class="box-skills">
-            <h3>💾 DataBase</h3>
-            <div class="skills">
+        <div class="box-skills observer ">
+            <h3 class="fadeout">💾 DataBase</h3>
+            <div class="skills ">
                 <div><img src="https://skillicons.dev/icons?i=mysql&theme=dark" alt="MySQL"/><br>MySQL </div>
                 <div> <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" alt="MongoDB"/><br>MongoDB </div>
                 <div> <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" alt="SQLite"/><br>SQLite </div>
@@ -195,9 +195,9 @@
 
 
 
-        <div class="box-skills">
-            <h3>🔧 Versionamento Deploy and Code Style</h3>
-            <div class="skills">
+        <div class="box-skills observer ">
+            <h3 class="fadeout">🔧 Versionamento Deploy and Code Style</h3>
+            <div class="skills ">
                 <div><img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git"/><br>Git</div>
                 <div><img src="https://skillicons.dev/icons?i=github&theme=dark" alt="GitHub"/><br>GitHub</div>
                 <div><img src="https://cdn.worldvectorlogo.com/logos/netlify.svg" width="48" alt="Netlify" /><br>Netlify</div>
@@ -209,9 +209,9 @@
             </div>
         </div>
 
-        <div class="box-skills">
-            <h3>📊 Web Analytics</h3>
-            <div class="skills">
+        <div class="box-skills  observer">
+            <h3 class="fadeout">📊 Web Analytics</h3>
+            <div class="skills ">
                 <div><img src="https://www.google.com/images/icons/product/analytics-64.png" width="48"
                         alt="Google Analytics" alt="Google Analytics"/><br>Google Analytics</div>
                 <div><img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg" width="48"
@@ -235,9 +235,9 @@
         <h3 id="Sobre">Quem Sou Eu</h3>
 
 
-        <div class="sobre-container">
-            <div class="image-container"><img src="./img/perfil-min.webp" alt="" class="imgPerfil" loading="lazy"></div>
-            <div class="sobre-perfil">
+        <div class="sobre-container ">
+            <div class="image-container observer"><img src="./img/perfil-min.webp" alt="" class="imgPerfil" loading="lazy"></div>
+            <div class="sobre-perfil observer">
                 <p>Sou Renan Ariza Salmazio, um desenvolvedor FullStack apaixonado por transformar ideias em soluções
                     reais.
                     Unindo programação e inteligência de dados, ajudo empresas a crescer com base em decisões
@@ -265,7 +265,7 @@
 
     <section class="formacao">
         <h3 id="formacao">Formação</h3>
-        <div class="card-formacao">
+        <div class="card-formacao observer">
             <div class="card">
                 <img src="./img/anhanguera.webp" alt="Anhanguera Logo" loading="lazy">
                 <div class="content">
@@ -352,8 +352,8 @@
     <script src="./js/script.js"></script>
     <script src="./js/handwriten.js"></script>
     <script src="./js/menuDropdown.js"></script>
-    <!-- <script src="./js/MenuEffect.js"></script> -->
     <script src="./js/DarkMode.js"></script>
+    <script src="./js/intersectionapi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
     $('a[href^="#"]').on('click', function(e) {
