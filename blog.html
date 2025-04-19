@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        .post {
+          border: 1px solid #ccc;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 8px;
+          font-family: sans-serif;
+        }
+        .post h2 {
+          margin: 0 0 0.5rem;
+        }
+        .post p {
+          margin: 0.5rem 0;
+        }
+        .post a {
+          color: #0077cc;
+          text-decoration: none;
+        }
+      </style>
+</head>
+<body>
+    <h1>Últimos artigos do Medium</h1>
+  <div id="posts"></div>
+
+
+  <script>
+    const container = document.getElementById('posts');
+    const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@renansalmazio';
+
+    fetch(feedUrl)
+      .then(res => res.json())
+      .then(data => {
+        data.items.slice(0, 5).forEach(post => { // mostra só os 5 últimos
+          const article = document.createElement('div');
+          article.className = 'post';
+
+          article.innerHTML = `
+            <h2><a href="${post.link}" target="_blank">${post.title}</a></h2>
+            <p><strong>Publicado em:</strong> ${new Date(post.pubDate).toLocaleDateString()}</p>
+            <p>${post.description.slice(0, 200)}...</p>
+          `;
+
+          container.appendChild(article);
+        });
+      })
+      .catch(err => {
+        container.innerHTML = '<p>Não foi possível carregar os artigos 😢</p>';
+        console.error(err);
+      });
+  </script>
+
+
+</body>
+</html>
