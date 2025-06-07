@@ -524,9 +524,12 @@ ul li a:hover::after {
     align-items:center
 }
 .formacao h3 {
-    text-align:center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     color:var(--font-text-quemSomos);
-    font-size:24px;
+    font-size:20px;
     margin-bottom:28px;
     padding:14px
 }
@@ -538,6 +541,8 @@ ul li a:hover::after {
     padding:14px
 }
 .formacao p {
+    align-items: center;
+    justify-content: center;
     text-align:center;
     color:var(--font-text-quemSomos);
     font-size:18px;
