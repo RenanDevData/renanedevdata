@@ -214,6 +214,11 @@ ul li a:hover::after {
     text-align:center;
     transition:3s ease
 }
+
+
+
+
+
 .portifolio .container-screen {
     display:flex;
     align-items:center;
@@ -229,6 +234,10 @@ ul li a:hover::after {
     border:1px solid var(--font1-text);
     border-radius:18px;
     margin-bottom:20px
+}
+.portifolio .screen:focus {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 4px;
 }
 .portifolio .screen:hover {
     background-position:bottom
@@ -276,14 +285,15 @@ ul li a:hover::after {
     background-size:cover;
     transition:background-position 8s linear
 }
+
 .s8 {
-    background:url(../img/projetos/javascript.webp);
+    background:url(../img/projetos/spotifyclone.webp);
     background-position:top;
     background-size:cover;
     transition:background-position 8s linear
 }
 .s9 {
-    background:url(../img/projetos/spotifyclone.webp);
+    background:url(../img/projetos/javascript.webp);
     background-position:top;
     background-size:cover;
     transition:background-position 8s linear
