@@ -313,12 +313,12 @@ ul li a:hover::after {
     font-weight:700
 }
 .habilidades h3 {
-    font-size:32px;
+    font-size:22px;
     color:var(--font-text2);
     text-align:center;
     letter-spacing:2px;
     font-weight:700;
-    margin:10px
+    margin:16px
 }
 .box-skills {
     display:flex;
@@ -403,11 +403,19 @@ ul li a:hover::after {
 }
 .email {
     color:var(--font1-text);
-    font-size:16px
+    font-size:16px;
+    margin-top: 6px;
 }
 .email i {
-    margin-right:4px
+    margin-right:4px;
+    margin: 6px;
+    
 }
+
+.font-h3{
+    font-size: 14px;
+}
+
 .btn {
     font-family:Orbitron,sans-serif;
     font-size:1.2rem;
