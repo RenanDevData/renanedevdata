@@ -254,6 +254,14 @@ ul li a:hover::after {
     background-size:cover;
     transition:background-position 20s linear
 }
+
+.portifolio .s2 {
+    background:url(../img/projetos/dataLayerBuild.webp);
+    background-position:top;
+    background-size:cover;
+    transition:background-position 20s linear
+}
+
 .portifolio .s3 {
     background:url(../img/projetos/adietaketo-min.webp);
     background-position:top;
